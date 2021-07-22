@@ -1,3 +1,8 @@
+1. Gradleを使って、gitの情報をSpringに埋め込む
+2. Gitのtag機能を使って、バージョン情報を与える
+3. Github actionsを使って、自動化を始める
+4. Github actionsを使って、アプリ配布まで自動化する
+
 # 1. Gradleを使って、gitの情報をSpringに埋め込む
 
 ![](./readme-imgs/gradle-init.png)
@@ -65,9 +70,9 @@ versionのところにgitのタグ情報が表示された。
 
 なお、gitではソースコードそのものとタグは別の線で送られるので、--tagsを付けないとタグの情報がgithubにプッシュされない。
 
-# 3. Github actionsを使って、自動化する
+# 3. Github actionsを使って、自動化を始める
 
-これを継続的デリバリー呼ぶ。
+これを継続的デリバリーと呼ぶ。
 
 「GradleでのJavaのビルドとテスト」 https://docs.github.com/ja/actions/guides/building-and-testing-java-with-gradle
 
@@ -92,13 +97,13 @@ Githubのこの機能を使う。
 
 ![](./readme-imgs/github-action-run.png)
 
-彼らのLinuxサーバーでソースコードに対して処理を行ってくれる。
+彼らのLinuxサーバーでソースコードに対して処理を行ってくれる。この一連の自動処理をパイプラインという。
 
 ![](./readme-imgs/procedures.png)
 
 その点をクリックすると実行している、または実行した処理の状況を教えてくれる。
 
-# 3.2 Github actionsを使って、アプリ配布まで自動化する
+# 4. Github actionsを使って、アプリ配布まで自動化する
 
 アプリ配布の処理も行える。
 
@@ -136,3 +141,7 @@ Githubのこの機能を使う。
 以上、それぞれアプリ配布の処理はこちらに詳細がある。
 - https://github.com/softprops/action-gh-release
 - https://github.com/actions/upload-artifact
+
+![](./readme-imgs/github-action-bot.png)
+
+リリースが自動で作成されるたびにgithubから結果通知メールが来た。
